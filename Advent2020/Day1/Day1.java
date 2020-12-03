@@ -1,3 +1,5 @@
+package Advent2020.Day1;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -5,6 +7,9 @@ import java.util.Scanner;
 public class Day1 {
     // The target sum needed for both stars
     public static final int TARGET = 2020;
+
+    // The input file path
+    public static final String FILE_PATH = "Advent2020/Day1/input.txt";
 
     public static void main(String[] args) {
         // Gets first star answer
@@ -44,12 +49,12 @@ public class Day1 {
     // Star one solution
     public static int star1() {
         // Scanner that loops for first number
-        Scanner scanner1 = readFile("2020/Day1/input.txt");
+        Scanner scanner1 = readFile(FILE_PATH);
         while(scanner1.hasNextInt()) {
             int num1 = scanner1.nextInt();
 
             // Scanner that loops for second number
-            Scanner scanner2 = readFile("2020/Day1/input.txt");
+            Scanner scanner2 = readFile(FILE_PATH);
             while(scanner2.hasNextInt()) {
                 int num2 = scanner2.nextInt();
 
@@ -74,19 +79,19 @@ public class Day1 {
     // Star two solution
     public static int star2() {
         // Scanner that loops for first number
-        Scanner scanner1 = readFile("2020/Day1/input.txt");
+        Scanner scanner1 = readFile(FILE_PATH);
         while(scanner1.hasNextInt()) {
             int num1 = scanner1.nextInt();
 
             // Scanner that loops for second number
-            Scanner scanner2 = readFile("2020/Day1/input.txt");
+            Scanner scanner2 = readFile(FILE_PATH);
             while(scanner2.hasNextInt()) {
                 int num2 = scanner2.nextInt();
 
                 // Ignores third loop is already greater than target
                 if(num1 + num2 < TARGET) {
                     // Scanner that loops for third number
-                    Scanner scanner3 = readFile("2020/Day1/input.txt");
+                    Scanner scanner3 = readFile(FILE_PATH);
                     while(scanner3.hasNext()) {
                         int num3 = scanner3.nextInt();
 
